@@ -9,6 +9,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "aframe": "^1.4.2",
+    "mind-ar": "^1.2.1",
+    "three": "^0.150.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
