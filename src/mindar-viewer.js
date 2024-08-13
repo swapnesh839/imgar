@@ -16,6 +16,21 @@ const Mindarviewer = () => {
         arSystem.start();
       });
     }
+    // if (navigator.xr) {
+    //   navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+    //     if (supported) {
+    //       // Start the XR session with 'bounded-floor' if available
+    //       navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['bounded-floor'] })
+    //         .then(
+    //           console.log("onSessionStarted")              
+    //         )
+    //         .catch((err) => {
+    //           console.warn('Bounded floor not supported, falling back:', err);
+    //           // Fallback to other session or feature
+    //         });
+    //     }
+    //   });
+    // }
 
     return () => {
       if (arSystem) {
@@ -36,20 +51,20 @@ const Mindarviewer = () => {
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <img id="card" alt="srcimg" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/card-example/card.png" />
-        <a-asset-item id="glbfile" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+        {/* <img id="card" alt="srcimg" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/card-example/card.png" /> */}
+        <a-asset-item id="glbfile" src="./asset.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 3 3" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane 
+        {/* <a-plane 
           src="#card" 
           position="0 0 0" 
           height="0.552" 
           width="1" 
           rotation="0 0 0"
-        ></a-plane>
+        ></a-plane> */}
         <a-gltf-model 
           rotation="0 0 0" 
           position="0 0 0.1" 
