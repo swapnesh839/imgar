@@ -14,3 +14,7 @@
   width: 100%;
   overflow: hidden;
 }
+#mainScene{
+  height: 100vh !important;
+  width: 100% !important;
+}
