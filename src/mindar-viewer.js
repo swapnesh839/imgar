@@ -71,8 +71,8 @@ const Mindarviewer = () => {
         ></a-plane> */}
         <a-gltf-model 
           rotation="0 0 0" 
-          position="0 0 0.1" 
-          scale=".5,.5,.5" 
+          position="0 0 0" 
+          scale=".3,.3,.3" 
           src="#glbfile" 
           animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
         ></a-gltf-model>
