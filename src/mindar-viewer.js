@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import 'aframe';
 import 'mind-ar/dist/mindar-image-aframe.prod.js';
 import "./App.css"
+import glbfile from "./asset.glb"
 
 const Mindarviewer = () => {
   const sceneref = useRef(null);
@@ -52,7 +53,10 @@ const Mindarviewer = () => {
     >
       <a-assets>
         {/* <img id="card" alt="srcimg" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/card-example/card.png" /> */}
-        <a-asset-item id="glbfile" src="./asset.glb"></a-asset-item>
+        <a-asset-item id="glbfile"
+         src={glbfile}
+        // src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"
+         ></a-asset-item>
       </a-assets>
 
       <a-camera position="0 3 3" look-controls="enabled: false"></a-camera>
@@ -68,7 +72,7 @@ const Mindarviewer = () => {
         <a-gltf-model 
           rotation="0 0 0" 
           position="0 0 0.1" 
-          scale="0.005 0.005 0.005" 
+          scale=".5,.5,.5" 
           src="#glbfile" 
           animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
         ></a-gltf-model>
