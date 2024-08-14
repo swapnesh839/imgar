@@ -14,6 +14,33 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+    <!-- <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 
+        'self' 
+        data: 
+        gap: 
+        https://ssl.gstatic.com 
+        'unsafe-eval' 
+        https://cdn.aframe.io         <-- required
+        https://dpdb.webvr.rocks      <-- required
+        https://fonts.googleapis.com  <-- required
+        https://cdn.jsdelivr.net      <-- your choice, see below
+        ; 
+      style-src 
+        'self' 
+        'unsafe-inline'
+        ; 
+      media-src *; 
+      img-src 
+        'self' 
+        data:                         <-- required
+        content:                      <-- required
+        blob:                         <-- required
+        ;
+    "
+  /> -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.

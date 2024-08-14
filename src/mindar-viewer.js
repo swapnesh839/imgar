@@ -41,9 +41,10 @@ const Mindarviewer = () => {
   }, []);
 
   return (
-    <a-scene 
+    <div id="mainScene" >
+      <a-scene 
       ref={sceneref}  
-      id="mainScene"
+      
       mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/card-example/card.mind; uiLoading: no; uiError: no; uiScanning: no;" 
       color-space="sRGB" 
       embedded 
@@ -70,14 +71,15 @@ const Mindarviewer = () => {
           rotation="0 0 0"
         ></a-plane> */}
         <a-gltf-model 
-          rotation="0 0 0" 
-          position="0 0 0" 
-          scale=".3,.3,.3" 
+          rotation="90 0 0" 
+          // position="0 0 0" 
+          // scale=".3,.3,.3" 
           src="#glbfile" 
           animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
         ></a-gltf-model>
       </a-entity>
     </a-scene>
+    </div>
   );
 };
 
